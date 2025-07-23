@@ -4,6 +4,7 @@ FROM openjdk:17
 # 2단계: JAR 파일 복사
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
+EXPOSE 8080
 
 
 # 3단계: 앱 실행
