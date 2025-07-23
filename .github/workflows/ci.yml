@@ -13,17 +13,14 @@ jobs:
       - name: 🔽 Checkout
         uses: actions/checkout@v3
 
-      - name: 🛠 gradlew 권한 부여
-        run: chmod +x ./gradlew
-
       - name: ☕️ JDK 설치
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: 🧱 Build with Gradle
-        run: ./gradlew bootJar
+      - name: 🧱 Build with Maven
+        run: mvn clean package -DskipTests
 
       - name: 🔐 DockerHub 로그인
         uses: docker/login-action@v3
