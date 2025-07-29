@@ -4,5 +4,6 @@ public class SeoYoungController {
 
     public void test(){
         System.out.println("이게된다구?");
+        System.out.println("이게된다구?");
     }
 }
